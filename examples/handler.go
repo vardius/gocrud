@@ -6,13 +6,13 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/vardius/crud"
 	"github.com/vardius/goapi"
+	"github.com/vardius/gocrud"
 	"github.com/vardius/gorepo"
 )
 
 func NewHandler(hName, rName string, t reflect.Type) http.HandlerFunc {
-	hdl, err := crud.Get(hName)
+	hdl, err := gocrud.Get(hName)
 	if err != nil {
 		panic(err)
 	}
