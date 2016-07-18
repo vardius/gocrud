@@ -1,9 +1,9 @@
 package main
 
 import (
-	"/env"
 	"reflect"
 
+	env "github.com/vardius/gocrud/examples/enviroment"
 	"github.com/vardius/gorepo"
 )
 

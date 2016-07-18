@@ -1,9 +1,9 @@
 package main
 
 import (
-	"/env"
 	"net/http"
 
+	env "github.com/vardius/gocrud/examples/enviroment"
 	"golang.org/x/net/context"
 )
 

@@ -1,13 +1,13 @@
 package main
 
 import (
-	"/env"
 	"net/http"
 	"reflect"
 	"time"
 
 	"github.com/vardius/goapi"
 	"github.com/vardius/gocrud"
+	env "github.com/vardius/gocrud/examples/enviroment"
 	"github.com/vardius/gorepo"
 )
 
