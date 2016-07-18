@@ -11,7 +11,7 @@ import (
 	"github.com/vardius/gorepo"
 )
 
-func NewHandler(hName, rName string, t reflect.Type) http.HandlerFunc {
+func NewHandler(hName, rName string, t reflect.Type) goapi.HandlerFunc {
 	hdl, err := gocrud.Get(hName)
 	if err != nil {
 		panic(err)
