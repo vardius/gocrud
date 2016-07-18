@@ -24,7 +24,7 @@ func NewHandler(hName, rName string, t reflect.Type) goapi.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request, c *goapi.Context) {
 		start := time.Now()
-		ctx, cancel, err := newContext()
+		ctx, cancel, err := newContext(r)
 		if err != nil {
 			panic(err)
 		}

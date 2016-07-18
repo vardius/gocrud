@@ -1,12 +1,13 @@
 package main
 
 import (
+	"net/http"
 	"time"
 
 	"golang.org/x/net/context"
 )
 
-func newContext() (context.Context, context.CancelFunc, error) {
+func newContext(req *http.Request) (context.Context, context.CancelFunc, error) {
 	var (
 		ctx    context.Context
 		cancel context.CancelFunc
