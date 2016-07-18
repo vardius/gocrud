@@ -6,6 +6,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/vardius/goapi"
 	"github.com/vardius/golog"
+	"golang.org/x/net/context"
 )
 
 var (

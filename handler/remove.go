@@ -29,7 +29,7 @@ func (act *removeAction) Handle(ctx context.Context, w http.ResponseWriter, req 
 		return
 	}
 
-	if err = body.Close(); err != nil {
+	if err = req.Body.Close(); err != nil {
 		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
 		return
 	}
