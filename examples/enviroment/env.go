@@ -10,9 +10,9 @@ import (
 )
 
 var (
-	Log    = golog.New()
-	Server = goapi.New()
-	DB     = connectToDB("root:password@tcp(localhost:3306)/test")
+	Log    golog.Logger
+	Server goapi.Server
+	DB     *sql.DB
 )
 
 func connectToDB(dbURL string) *sql.DB {
@@ -27,4 +27,10 @@ func connectToDB(dbURL string) *sql.DB {
 	}
 
 	return conn
+}
+
+func init() {
+	Log = golog.New()
+	Server = goapi.New()
+	DB = connectToDB("root:password@tcp(127.0.0.1:3306)/test")
 }

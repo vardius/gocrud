@@ -1,4 +1,4 @@
-package handler
+package gocrud
 
 import (
 	"encoding/json"
@@ -6,7 +6,6 @@ import (
 	"reflect"
 
 	"github.com/vardius/goapi"
-	"github.com/vardius/gocrud"
 	"github.com/vardius/gorepo"
 	"golang.org/x/net/context"
 )
@@ -50,5 +49,5 @@ func doGetAll(ctx context.Context, repo gorepo.Repository, f func(v interface{},
 }
 
 func init() {
-	gocrud.Register("list", &listAction{})
+	Register("list", &listAction{})
 }

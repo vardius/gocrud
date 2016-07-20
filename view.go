@@ -1,4 +1,4 @@
-package handler
+package gocrud
 
 import (
 	"encoding/json"
@@ -7,7 +7,6 @@ import (
 	"strconv"
 
 	"github.com/vardius/goapi"
-	"github.com/vardius/gocrud"
 	"github.com/vardius/gorepo"
 	"golang.org/x/net/context"
 )
@@ -60,5 +59,5 @@ func doGet(ctx context.Context, repo gorepo.Repository, id int64, f func(v inter
 }
 
 func init() {
-	gocrud.Register("view", &viewAction{})
+	Register("view", &viewAction{})
 }

@@ -1,4 +1,4 @@
-package handler
+package gocrud
 
 import (
 	"encoding/json"
@@ -8,7 +8,6 @@ import (
 	"reflect"
 
 	"github.com/vardius/goapi"
-	"github.com/vardius/gocrud"
 	"github.com/vardius/gorepo"
 	"golang.org/x/net/context"
 )
@@ -60,5 +59,5 @@ func doSave(ctx context.Context, repo gorepo.Repository, data interface{}) error
 }
 
 func init() {
-	gocrud.Register("save", &saveAction{})
+	Register("save", &saveAction{})
 }
