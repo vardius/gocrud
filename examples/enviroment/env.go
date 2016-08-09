@@ -4,14 +4,14 @@ import (
 	"database/sql"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/vardius/goapi"
 	"github.com/vardius/golog"
+	"github.com/vardius/goserver"
 	"golang.org/x/net/context"
 )
 
 var (
 	Log    golog.Logger
-	Server goapi.Server
+	Server goserver.Server
 	DB     *sql.DB
 )
 
@@ -31,6 +31,6 @@ func connectToDB(dbURL string) *sql.DB {
 
 func init() {
 	Log = golog.New()
-	Server = goapi.New()
+	Server = goserver.New()
 	DB = connectToDB("root:password@tcp(127.0.0.1:3306)/test")
 }

@@ -5,13 +5,13 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/vardius/goapi"
 	"github.com/vardius/gocrud"
 	env "github.com/vardius/gocrud/examples/enviroment"
 	"github.com/vardius/gorepo"
+	"github.com/vardius/goserver"
 )
 
-func NewHandler(hName, rName string, t reflect.Type) goapi.HandlerFunc {
+func NewHandler(hName, rName string, t reflect.Type) goserver.HandlerFunc {
 	hdl, err := gocrud.Get(hName)
 	if err != nil {
 		panic(err)
@@ -22,7 +22,7 @@ func NewHandler(hName, rName string, t reflect.Type) goapi.HandlerFunc {
 		panic(err)
 	}
 
-	return func(w http.ResponseWriter, r *http.Request, c *goapi.Context) {
+	return func(w http.ResponseWriter, r *http.Request, c *goserver.Context) {
 		start := time.Now()
 		ctx, cancel, err := newContext(r)
 		if err != nil {

@@ -5,14 +5,14 @@ import (
 	"net/http"
 	"reflect"
 
-	"github.com/vardius/goapi"
 	"github.com/vardius/gorepo"
+	"github.com/vardius/goserver"
 	"golang.org/x/net/context"
 )
 
 type listAction struct{}
 
-func (act *listAction) Handle(ctx context.Context, w http.ResponseWriter, req *http.Request, c *goapi.Context, repo gorepo.Repository, t reflect.Type) {
+func (act *listAction) Handle(ctx context.Context, w http.ResponseWriter, req *http.Request, c *goserver.Context, repo gorepo.Repository, t reflect.Type) {
 	var (
 		err  error
 		data interface{}

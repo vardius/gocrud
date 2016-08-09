@@ -7,13 +7,13 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/vardius/goapi"
 	"github.com/vardius/gorepo"
+	"github.com/vardius/goserver"
 	"golang.org/x/net/context"
 )
 
 type Handler interface {
-	Handle(context.Context, http.ResponseWriter, *http.Request, *goapi.Context, gorepo.Repository, reflect.Type)
+	Handle(context.Context, http.ResponseWriter, *http.Request, *goserver.Context, gorepo.Repository, reflect.Type)
 }
 
 var (
