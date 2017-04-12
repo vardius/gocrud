@@ -1,6 +1,6 @@
 Vardius - gocrud
 ================
-[![Build Status](https://travis-ci.org/vardius/gocrud.svg?branch=master)](https://travis-ci.org/vardius/gocrud) [![Coverage Status](https://coveralls.io/repos/github/vardius/gocrud/badge.svg?branch=master)](https://coveralls.io/github/vardius/gocrud?branch=master) [![](https://godoc.org/github.com/vardius/gocrud?status.svg)](http://godoc.org/github.com/vardius/gocrud)
+[![Build Status](https://travis-ci.org/vardius/gocrud.svg?branch=master)](https://travis-ci.org/vardius/gocrud) [![Doc](https://godoc.org/github.com/vardius/gocrud?status.svg)](http://godoc.org/github.com/vardius/gocrud) [![Coverage Status](https://coveralls.io/repos/github/vardius/gocrud/badge.svg?branch=master)](https://coveralls.io/github/vardius/gocrud?branch=master)
 
 Simple GO Crud provider
 
